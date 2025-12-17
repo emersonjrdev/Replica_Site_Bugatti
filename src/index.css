@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+/* Scroll snap apenas no main - removido temporariamente para debug */
+/* main {
+  scroll-snap-type: y mandatory;
+} */
+
+/* Scroll snap para seções fullscreen */
+/* section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+} */
+
+/* Smooth scroll com easing customizado */
+@supports (scroll-behavior: smooth) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  background-color: #000000;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555555;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.vehicle-card-animated {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.news-item {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Smooth transitions */
+* {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Garantir que elementos interativos sejam clicáveis */
+button, a, [role="button"] {
+  pointer-events: auto !important;
+  cursor: pointer;
+}
+
+/* Garantir que o body não bloqueie */
+body {
+  pointer-events: auto;
+}
