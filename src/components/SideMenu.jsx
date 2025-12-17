@@ -34,14 +34,17 @@ const SideMenu = ({ isOpen, onClose }) => {
         onClick={onClose}
       />
 
-      {/* Menu Container - apenas lado esquerdo */}
+      {/* Menu Container - apenas lado esquerdo - responsivo */}
       <div
-        className={`fixed left-0 top-0 bottom-0 w-80 sm:w-96 bg-white z-[9997] overflow-y-auto transition-transform duration-300 ease-in-out ${
+        className={`fixed left-0 top-0 bottom-0 bg-white z-[9997] overflow-y-auto transition-transform duration-300 ease-in-out ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
+        style={{
+          width: 'clamp(280px, 66.666vw, 384px)' // ~2/3 da tela no mobile, máximo 384px
+        }}
       >
         {/* Menu Content - SEM botão de fechar */}
-        <div className="p-6 pt-20">
+        <div className="p-4 sm:p-6 pt-16 sm:pt-20">
           {/* HYPER SPORTS CARS */}
           <div className="mb-8">
             <h3 className="text-xs font-light tracking-wider text-gray-500 uppercase mb-4">
@@ -303,17 +306,20 @@ const SideMenu = ({ isOpen, onClose }) => {
 
       {/* Content Area - Cards - lado direito, visível ao lado do menu */}
       <div
-        className={`fixed left-80 sm:left-96 top-0 right-0 bottom-0 bg-black/95 backdrop-blur-sm overflow-y-auto z-[9996] pointer-events-auto transition-opacity duration-300 ${
+        className={`fixed top-0 right-0 bottom-0 bg-black/95 backdrop-blur-sm overflow-y-auto z-[9996] pointer-events-auto transition-opacity duration-300 ${
           isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
         }`}
+        style={{
+          left: 'clamp(280px, 66.666vw, 384px)' // Começa onde o menu termina
+        }}
       >
-        <div className="container mx-auto px-6 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+        <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-12">
+          <div className="grid grid-cols-1 gap-4 sm:gap-6 max-w-6xl mx-auto">
             {cards.map((card) => (
               <a
                 key={card.id}
                 href={`#${card.id}`}
-                className="group relative h-[500px] overflow-hidden cursor-pointer block"
+                className="group relative h-[400px] sm:h-[500px] overflow-hidden cursor-pointer block"
                 onClick={(e) => {
                   e.preventDefault()
                   console.log(`Clicked on ${card.name}`)
@@ -325,8 +331,8 @@ const SideMenu = ({ isOpen, onClose }) => {
                   className="w-full h-full object-cover scale-100 group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-                <div className="absolute bottom-0 left-0 p-8 z-10">
-                  <h3 className="text-5xl md:text-6xl font-extralight tracking-tight text-white">
+                <div className="absolute bottom-0 left-0 p-4 sm:p-8 z-10">
+                  <h3 className="text-3xl sm:text-5xl md:text-6xl font-extralight tracking-tight text-white">
                     {card.name}
                   </h3>
                 </div>

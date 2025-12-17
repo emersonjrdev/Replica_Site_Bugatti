@@ -34,20 +34,20 @@ const Hero = () => {
       </div>
 
       {/* Main Content - Solitaire Section */}
-      <div className="relative z-20 container mx-auto px-6 pt-32 pb-20 min-h-screen flex items-center justify-center">
+      <div className="relative z-20 container mx-auto px-4 sm:px-6 pt-24 sm:pt-32 pb-16 sm:pb-20 min-h-screen flex items-center justify-center">
         <div className="w-full max-w-6xl">
           {/* Solitaire Wordmark */}
-          <div className="mb-8 flex justify-center">
+          <div className="mb-6 sm:mb-8 flex justify-center">
             <img
               src="https://bugatti.imgix.net/689394f09fe9b36d362dec02/Solitaire_Wordmark_black_tight.svg?auto=format,compress&cs=srgb&sharp=10&w=594"
               alt="Solitaire"
-              className="h-32 md:h-48 w-auto filter brightness-0 invert"
+              className="h-24 sm:h-32 md:h-40 lg:h-48 w-auto filter brightness-0 invert"
             />
           </div>
 
           {/* Slogan */}
-          <div className="text-center mb-12">
-            <p className="text-sm md:text-base font-light tracking-[0.3em] text-white/90 uppercase mb-4">
+          <div className="text-center mb-8 sm:mb-12">
+            <p className="text-xs sm:text-sm md:text-base font-light tracking-[0.2em] sm:tracking-[0.3em] text-white/90 uppercase mb-4 px-4">
               ROOTED IN TRADITION. BUILT TO LEAVE A LEGACY.
             </p>
           </div>
@@ -56,7 +56,7 @@ const Hero = () => {
           <div className="flex justify-center relative z-30">
             <a
               href="#solitaire"
-              className="px-8 py-4 border-2 border-white text-white font-light tracking-wider hover:bg-white hover:text-black transition-all duration-300 text-sm uppercase inline-block cursor-pointer relative z-30"
+              className="px-6 sm:px-8 py-3 sm:py-4 border-2 border-white text-white font-light tracking-wider hover:bg-white hover:text-black transition-all duration-300 text-xs sm:text-sm uppercase inline-block cursor-pointer relative z-30"
               onClick={(e) => {
                 e.preventDefault()
                 // Scroll para seção solitaire se existir

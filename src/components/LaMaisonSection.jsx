@@ -2,8 +2,8 @@ const LaMaisonSection = () => {
   return (
     <section className="relative h-screen w-full bg-black snap-start snap-always overflow-hidden">
       {/* Black section with text */}
-      <div className="absolute inset-0 flex items-center justify-center z-10">
-        <h2 className="text-6xl md:text-8xl lg:text-9xl font-extralight tracking-tight text-white">
+      <div className="absolute inset-0 flex items-center justify-center z-10 px-4">
+        <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl xl:text-9xl font-extralight tracking-tight text-white text-center">
           LA MAISON BUGATTI
         </h2>
       </div>

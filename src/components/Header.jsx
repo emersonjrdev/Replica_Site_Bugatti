@@ -33,7 +33,7 @@ const Header = () => {
         }`}
         style={{ zIndex: 9998 }}
       >
-        <nav className="container mx-auto px-6 py-5 flex items-center justify-between">
+        <nav className="container mx-auto px-4 sm:px-6 py-4 sm:py-5 flex items-center justify-between">
           {/* Menu Hamburger */}
           <button
             onClick={(e) => {
@@ -58,7 +58,7 @@ const Header = () => {
                 d="M4 6h16M4 12h16M4 18h16"
               />
             </svg>
-            <span className="text-sm font-light tracking-[0.15em] uppercase">
+            <span className="text-xs sm:text-sm font-light tracking-[0.15em] uppercase">
               MENU
             </span>
           </button>
@@ -67,7 +67,7 @@ const Header = () => {
           <div className="absolute left-1/2 transform -translate-x-1/2">
             <a
               href="/"
-              className="text-base sm:text-lg md:text-xl font-light text-white hover:text-gray-300 transition-colors uppercase"
+              className="text-sm sm:text-base md:text-lg lg:text-xl font-light text-white hover:text-gray-300 transition-colors uppercase"
               style={{ 
                 letterSpacing: '0.5em',
                 fontFamily: 'Arial, Helvetica, sans-serif'
@@ -88,7 +88,7 @@ const Header = () => {
             aria-label="Store"
             style={{ zIndex: 9999, position: 'relative' }}
           >
-            <span className="text-sm font-light tracking-[0.15em] uppercase">
+            <span className="text-xs sm:text-sm font-light tracking-[0.15em] uppercase">
               STORE
             </span>
             <svg

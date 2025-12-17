@@ -109,8 +109,8 @@ const VehiclesSection = () => {
             </div>
 
             {/* Vehicle Name - Large text bottom left */}
-            <div className="absolute bottom-0 left-0 p-8 md:p-12 lg:p-16 z-10 pointer-events-none">
-              <h2 className="text-7xl md:text-8xl lg:text-[10rem] xl:text-[12rem] font-extralight tracking-tight text-white transform group-hover:translate-x-6 transition-transform duration-700 leading-none">
+            <div className="absolute bottom-0 left-0 p-4 sm:p-6 md:p-8 lg:p-12 xl:p-16 z-10 pointer-events-none">
+              <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-[10rem] font-extralight tracking-tight text-white transform group-hover:translate-x-3 sm:group-hover:translate-x-6 transition-transform duration-700 leading-none">
                 {vehicle.name}
               </h2>
             </div>

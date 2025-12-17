@@ -47,15 +47,15 @@ const NewsSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-screen py-32 bg-black overflow-hidden flex items-center"
+      className="relative min-h-screen py-16 sm:py-24 md:py-32 bg-black overflow-hidden flex items-center"
     >
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4 sm:px-6">
         {/* Section Title */}
-        <div className="text-center mb-20">
-          <h2 className="text-5xl md:text-7xl font-extralight tracking-tight text-white mb-4">
+        <div className="text-center mb-12 sm:mb-16 md:mb-20">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-extralight tracking-tight text-white mb-4">
             NEWS
           </h2>
-          <div className="w-24 h-px bg-white/30 mx-auto"></div>
+          <div className="w-16 sm:w-24 h-px bg-white/30 mx-auto"></div>
         </div>
 
         {/* News Grid */}
@@ -74,7 +74,7 @@ const NewsSection = () => {
               }}
             >
               {/* News Image */}
-              <div className="relative h-80 overflow-hidden">
+              <div className="relative h-64 sm:h-80 overflow-hidden">
                 <img
                   src={item.image}
                   alt={item.title}

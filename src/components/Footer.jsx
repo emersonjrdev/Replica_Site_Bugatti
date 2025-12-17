@@ -1,8 +1,8 @@
 const Footer = () => {
   return (
-    <footer className="relative bg-black border-t border-white/10 py-16">
-      <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+    <footer className="relative bg-black border-t border-white/10 py-12 sm:py-16">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-12 mb-8 sm:mb-12">
           {/* HYPER SPORTS CARS */}
           <div>
             <h3 className="text-xs font-light tracking-wider text-gray-500 uppercase mb-4">

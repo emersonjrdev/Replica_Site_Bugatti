@@ -14,7 +14,7 @@ const RecruitmentCard = () => {
 
   return (
     <div 
-      className="fixed bottom-4 right-4 sm:bottom-8 sm:right-8 w-80 sm:w-96 max-w-[calc(100vw-2rem)]"
+      className="fixed bottom-4 right-4 sm:bottom-8 sm:right-8 w-[calc(100vw-2rem)] sm:w-80 md:w-96 max-w-[calc(100vw-2rem)] sm:max-w-none"
       style={{ zIndex: 10000 }}
     >
       <div className="bg-black/90 backdrop-blur-md border border-white/10 overflow-visible hover:border-white/20 transition-all duration-300 shadow-2xl relative">
